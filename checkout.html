@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Barista Brew</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Checkout</h1>
+        <form id="checkoutForm" action="https://formspree.io/f/xoveyvpk" method="POST">
+            <!-- User Info -->
+<div class="section">
+    <h2>Personal Information</h2>
+    <label for="fullName">Full Name</label>
+    <input type="text" id="fullName" name="Full Name" placeholder="Enter your full name" required>
+
+    <label for="pickup-date">Pick-Up Date</label>
+    <input type="date" id="pickup-date" name="Pick-Up Date" required>
+    <small style="display:block; margin-top: 4px; color: #8b6b5c;">
+        Date is limited to today only
+    </small>
+
+    <label for="pickupTime">Pick-Up Time</label>
+    <input type="time" id="pickupTime" name="Pick-Up Time" required>
+    <small style="display:block; margin-top: 4px; color: #8b6b5c;">
+        Tap or click the field to choose your pick-up time
+    </small>
+</div>
+
+
+            <!-- Order Summary -->
+            <div class="section">
+                <h2>Order Summary</h2>
+                <div id="cartSummary" class="cart-summary">
+                </div>
+                <div class="total">
+                    <strong>Total: <span id="orderTotal">₱0.00</span></strong>
+                </div>
+                <input type="hidden" id="cartData" name="Cart Data">
+            </div>
+
+            <!-- Submit -->
+            <div class="submit-section">
+                <button type="submit" class="btn-submit">Place Order</button>
+                <a href="menue.html" class="btn-back">← Go Back to Menu</a>
+            </div>
+            
+        </form>
+    </div>
+    <script src="checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+/* Global Styles */
+body {
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #121212;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffcc70;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    
+  }
+  
+  .logo:hover {
+    color: #4a2e13;
+    transform: scale(1.05);
+  }
+  
+  .navbar-nav {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navbar-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .navbar-nav a:hover {
+    color: #ffc107;
+  }
+
+  @media (max-width: 768px) {
+    .navbar-nav {
+      display: none;
+      flex-direction: column;
+      background-color: #111;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      width: 200px;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+  
+    .navbar-nav.show {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .nav-right {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+  
+  /* Hide hamburger on desktop */
+  .hamburger {
+    display: none;
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Cart Icon */
+  .cart-icon {
+    color: #fff;
+    font-size: 1.5rem;
+    position: relative;
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+  
+  .cart-count {
+    background-color: #28a745;
+    color: white;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    position: absolute;
+    top: -8px;
+    right: -10px;
+  }
+  
+  /* Menu Layout */
+  .menu {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  
+  .category-buttons {
+    margin-bottom: 2rem;
+  }
+  
+  .category-buttons button {
+    background-color: #343a40;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .category-buttons button:hover {
+    background-color: #ffc107;
+    color: #121212;
+  }
+  
+  .menu-section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .menu-section.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  .menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .menu-item {
+    background-color: #1e1e1e;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align everything at the top */
+    align-items: center;
+    height: 400px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .menu-item .item-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  
+  .menu-item img {
+    width: 100%;
+    height: 200px; /* or whatever fixed height you want */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .menu-item h3 {
+    margin: 0.5rem 0 0.2rem;
+  }
+
+  .menu-item p {
+    color: #ffc107;
+    font-weight: bold;
+  }
+  
+  .menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  
+  .add-to-cart {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    margin-top: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #218838;
+  }
+  
+  @media (max-width: 500px) {
+    .menu-item {
+      width: 50%;
+    }
+  }
+  
+  /* Cart Popup */
+  #cartPopup {
+    position: fixed;
+    top: 70px;
+    right: -350px; /* Start offscreen */
+    background-color: #1a1a1a;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    z-index: 1000;
+    max-width: 300px;
+    width: 100%;
+    transition: right 0.3s ease-in-out;
+    color: white;
+  }
+  
+  #cartPopup.show {
+    right: 20px; /* Slide in */
+  }
+  
+  #cartPopup h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+  }
+  
+  #cart-items p {
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #cart-items .btn-remove {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .cart-empty {
+    color: #888;
+    font-size: 0.95rem;
+  }
+  
+  #cartPopup button {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.6rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  #cartPopup button:hover {
+    background-color: #218838;
+  }
+
+  #cartPopup .clear-cart-btn {
+    background-color: #dc3545; /* Bootstrap Red */
+    margin-top: 0.5rem;
+  }
+  
+  #cartPopup .clear-cart-btn:hover {
+    background-color: #c82333;
+  }
+
+  /* Hamburger icon styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Show hamburger on mobile */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav-links {
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background-color: #111;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      display: none;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  }

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barista Brew | Menu</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+          <a href="index.html" class="logo">Barista Brew</a>
+
+          <div class="hamburger" id="hamburger-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+      
+          <div class="nav-right">
+            <ul class="navbar-nav" id="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="location.html">Location</a></li>
+              <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+      
+            <!-- Cart Icon -->
+            <div class="cart-icon" onclick="toggleCartPopup()">
+              🛒 <span class="cart-count">0</span>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Cart Popup -->
+<div id="cartPopup" class="cart-popup">
+    <div id="cart-items">
+      <p>Your cart is empty.</p>
+    </div>
+    <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+    <button onclick="checkoutCart()">Checkout</button>
+  </div>
+  
+      
+      
+
+  <main class="menu">
+    <div class="category-buttons">
+        <button data-category="milktea" class="active">Milk Tea</button>
+        <button data-category="fruittea">Fruit Tea</button>
+        <button data-category="frappe">Frappe</button>
+        <button data-category="hotcoffee">Hot Coffee</button>
+        <button data-category="icedcoffee">Iced Coffee</button>
+        <button data-category="addons">Add-Ons</button>
+      </div>
+      
+
+    <div class="menu-section" id="milktea">
+      <h2>Milk Tea</h2>
+      <div class="menu-items">
+        <div class="menu-item">
+          <img src="Pictures/chocolate.jpg" alt="milktea">
+          <h3>Chocolate Milk Tea</h3>
+          <p>₱28.00</p>
+          <button class="add-to-cart" onclick="addToCart('Chocolate Milk Tea', 28)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="Pictures/strawberry.jpg" alt="milktea">
+            <h3>Strawberry Milk Tea</h3>
+            <p>₱28.00</p>
+            <button class="add-to-cart" onclick="addToCart('Strawberry Milk Tea', 28)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+            <img src="Pictures/cookies.jpg" alt="milktea">
+            <h3>Cookies and Cream Milk Tea</h3>
+            <p>₱28.00</p>
+            <button class="add-to-cart" onclick="addToCart('Cookies and Cream Milk Tea', 28)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+            <img src="Pictures/Wintermelon.jpg" alt="milktea">
+            <h3>Wintermelon Milk Tea</h3>
+            <p>₱28.00</p>
+            <button class="add-to-cart" onclick="addToCart('Wintermelon Milk Tea', 28)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+            <img src="Pictures/matcha.jpg" alt="milktea">
+            <h3>Matcha Milk Tea</h3>
+            <p>₱28.00</p>
+            <button class="add-to-cart" onclick="addToCart('Matcha Milk Tea', 28)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+            <img src="Pictures/okinawa.jpg" alt="milktea">
+            <h3>Okinawa Milk Tea</h3>
+            <p>₱28.00</p>
+            <button class="add-to-cart" onclick="addToCart('Okinawa Milk Tea', 28)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+            <img src="Pictures/darkchoco.jpg" alt="milktea">
+            <h3>Dark Choco Milk Tea</h3>
+            <p>₱28.00</p>
+            <button class="add-to-cart" onclick="addToCart('Dark Choco Milk Tea', 28)">Add to Cart</button>
+          </div>
+      </div>
+    </div>
+
+    <div class="menu-section" id="fruittea">
+      <h2>Fruit Tea</h2>
+      <div class="menu-items">
+          <div class="menu-item">
+            <img src="images/latte1.jpg" alt="Vanilla Latte">
+            <h3>Vanilla Latte</h3>
+            <p>$4.00</p>
+            <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+            <img src="images/latte1.jpg" alt="Vanilla Latte">
+            <h3>Vanilla Latte</h3>
+            <p>$4.00</p>
+            <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+            <img src="images/latte1.jpg" alt="Vanilla Latte">
+            <h3>Vanilla Latte</h3>
+            <p>$4.00</p>
+            <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+            <img src="images/latte1.jpg" alt="Vanilla Latte">
+            <h3>Vanilla Latte</h3>
+            <p>$4.00</p>
+            <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+          </div>
+                  <div class="menu-item">
+          <img src="images/latte1.jpg" alt="Vanilla Latte">
+          <h3>Vanilla Latte</h3>
+          <p>$4.00</p>
+          <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+        </div>  
+      </div>
+    </div>
+
+    <div class="menu-section" id="frappe">
+        <h2>Frappe</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <img src="images/coldbrew1.jpg" alt="Cold Brew Black">
+            <h3>Cold Brew Black</h3>
+            <p>$4.25</p>
+            <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+            <img src="images/coldbrew1.jpg" alt="Cold Brew Black">
+            <h3>Cold Brew Black</h3>
+            <p>$4.25</p>
+            <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+            <img src="images/coldbrew1.jpg" alt="Cold Brew Black">
+            <h3>Cold Brew Black</h3>
+            <p>$4.25</p>
+            <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+            <img src="images/coldbrew1.jpg" alt="Cold Brew Black">
+            <h3>Cold Brew Black</h3>
+            <p>$4.25</p>
+            <<button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+            <img src="images/coldbrew1.jpg" alt="Cold Brew Black">
+            <h3>Cold Brew Black</h3>
+            <p>$4.25</p>
+            <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+            <img src="images/coldbrew1.jpg" alt="Cold Brew Black">
+            <h3>Cold Brew Black</h3>
+            <p>$4.25</p>
+            <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+            <img src="images/coldbrew1.jpg" alt="Cold Brew Black">
+            <h3>Cold Brew Black</h3>
+            <p>$4.25</p>
+            <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+          </div>
+        </div>
+      </div>                         
+    
+
+    <div class="menu-section" id="hotcoffee">
+      <h2>Hot Coffee</h2>
+      <div class="menu-items">
+        <div class="menu-item">
+            <img src="images/frappe1.jpg" alt="Mocha Frappe">
+            <h3>Mocha Frappe</h3>
+            <p>$4.75</p>
+            <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+            <img src="images/frappe1.jpg" alt="Mocha Frappe">
+            <h3>Mocha Frappe</h3>
+            <p>$4.75</p>
+            <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+            <img src="images/frappe1.jpg" alt="Mocha Frappe">
+            <h3>Mocha Frappe</h3>
+            <p>$4.75</p>
+            <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+            <img src="images/frappe1.jpg" alt="Mocha Frappe">
+            <h3>Mocha Frappe</h3>
+            <p>$4.75</p>
+            <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+            <img src="images/frappe1.jpg" alt="Mocha Frappe">
+            <h3>Mocha Frappe</h3>
+            <p>$4.75</p>
+            <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+            <img src="images/frappe1.jpg" alt="Mocha Frappe">
+            <h3>Mocha Frappe</h3>
+            <p>$4.75</p>
+            <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+          </div>
+      </div>
+    </div>
+
+    <div class="menu-section" id="icedcoffee">
+        <h2>Iced Coffee</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <img src="images/frappe1.jpg" alt="Mocha Frappe">
+            <h3>Mocha Frappe</h3>
+            <p>$4.75</p>
+            <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+              <img src="images/frappe1.jpg" alt="Mocha Frappe">
+              <h3>Mocha Frappe</h3>
+              <p>$4.75</p>
+              <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+              <img src="images/frappe1.jpg" alt="Mocha Frappe">
+              <h3>Mocha Frappe</h3>
+              <p>$4.75</p>
+              <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+              <img src="images/frappe1.jpg" alt="Mocha Frappe">
+              <h3>Mocha Frappe</h3>
+              <p>$4.75</p>
+              <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+              <img src="images/frappe1.jpg" alt="Mocha Frappe">
+              <h3>Mocha Frappe</h3>
+              <p>$4.75</p>
+              <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+              <img src="images/frappe1.jpg" alt="Mocha Frappe">
+              <h3>Mocha Frappe</h3>
+              <p>$4.75</p>
+              <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+            </div>
+        </div>
+      </div>
+
+      <div class="menu-section" id="addons">
+        <h2>Add-Ons</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <img src="images/frappe1.jpg" alt="Mocha Frappe">
+            <h3>Mocha Frappe</h3>
+            <p>$4.75</p>
+            <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+          </div>
+          <div class="menu-item">
+              <img src="images/frappe1.jpg" alt="Mocha Frappe">
+              <h3>Mocha Frappe</h3>
+              <p>$4.75</p>
+              <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+              <img src="images/frappe1.jpg" alt="Mocha Frappe">
+              <h3>Mocha Frappe</h3>
+              <p>$4.75</p>
+              <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+              <img src="images/frappe1.jpg" alt="Mocha Frappe">
+              <h3>Mocha Frappe</h3>
+              <p>$4.75</p>
+              <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+              <img src="images/frappe1.jpg" alt="Mocha Frappe">
+              <h3>Mocha Frappe</h3>
+              <p>$4.75</p>
+              <button class="add-to-cart" onclick="addToCart('Espresso Classic', 3.50)">Add to Cart</button>
+            </div>
+        </div>
+      </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
