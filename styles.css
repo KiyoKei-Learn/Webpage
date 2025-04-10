@@ -40,6 +40,9 @@ body {
   .navbar-nav {
     display: flex;
     gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
   
   .navbar-nav a {
@@ -50,6 +53,29 @@ body {
   
   .navbar-nav a:hover {
     color: #ffc107;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #ffcc70;
+    transform: scale(1.05);
   }
 
   @media (max-width: 768px) {
@@ -70,19 +96,16 @@ body {
     }
   
     .hamburger {
-      display: block;
-      cursor: pointer;
-    }
+        display: none;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 4px;
+      }
   
     .nav-right {
       flex-direction: column;
       align-items: flex-end;
     }
-  }
-  
-  /* Hide hamburger on desktop */
-  .hamburger {
-    display: none;
   }
   
   .nav-right {
@@ -135,6 +158,12 @@ body {
   .category-buttons button:hover {
     background-color: #ffc107;
     color: #121212;
+  }
+
+  .category-buttons button.active {
+    background-color: #ffc107;
+    color: #121212;
+    box-shadow: 0 0 10px #ffc107, 0 0 20px #ffc107;
   }
   
   .menu-section {
@@ -296,41 +325,42 @@ body {
   }
 
   /* Hamburger icon styles */
-.hamburger {
+  .hamburger {
     display: none;
-    flex-direction: column;
     cursor: pointer;
+    flex-direction: column;
     gap: 5px;
+    z-index: 1001;
   }
   
   .hamburger .bar {
-    width: 25px;
-    height: 3px;
+    width: 30px;
+    height: 4px;
     background-color: #fff;
-    border-radius: 2px;
+    border-radius: 4px;
     transition: all 0.3s ease;
   }
   
-  /* Show hamburger on mobile */
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     .hamburger {
       display: flex;
     }
   
-    .nav-links {
+    .navbar-nav {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.95);
       position: absolute;
       top: 70px;
-      right: 0;
-      background-color: #111;
-      flex-direction: column;
+      left: 0;
       width: 100%;
-      text-align: center;
-      display: none;
-      gap: 1rem;
       padding: 1rem 0;
+      gap: 1rem;
+      z-index: 1000;
     }
   
-    .nav-links.show {
+    .navbar-nav.show {
       display: flex;
     }
   }
