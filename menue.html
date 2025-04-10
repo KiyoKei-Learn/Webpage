@@ -6,7 +6,7 @@
   <title>Barista Brew | Menu</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body>  
     <nav class="navbar">
         <div class="navbar-container">
           <a href="index.html" class="logo">Barista Brew</a>
@@ -20,7 +20,7 @@
           <div class="nav-right">
             <ul class="navbar-nav" id="nav-links">
               <li><a href="index.html">Home</a></li>
-              <li><a href="menu.html">Menu</a></li>
+              <li><a href="menue.html">Menu</a></li>
               <li><a href="location.html">Location</a></li>
               <li><a href="aboutus.html">About Us</a></li>
             </ul>
@@ -47,12 +47,12 @@
 
   <main class="menu">
     <div class="category-buttons">
-        <button data-category="milktea" class="active">Milk Tea</button>
-        <button data-category="fruittea">Fruit Tea</button>
-        <button data-category="frappe">Frappe</button>
-        <button data-category="hotcoffee">Hot Coffee</button>
-        <button data-category="icedcoffee">Iced Coffee</button>
-        <button data-category="addons">Add-Ons</button>
+        <button data-category="milktea" onclick="showCategory('milktea')">Milk Tea</button>
+        <button data-category="fruittea" onclick="showCategory('fruittea')">Fruit Tea</button>
+        <button data-category="frappe" onclick="showCategory('frappe')">Frappe</button>
+        <button data-category="hotcoffee" onclick="showCategory('hotcoffee')">Hot Coffee</button>
+        <button data-category="icedcoffee" onclick="showCategory('icedcoffee')">Iced Coffee</button>
+        <button data-category="addons" onclick="showCategory('addons')">Add-Ons</button>
       </div>
       
 
