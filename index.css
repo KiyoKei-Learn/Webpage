@@ -62,19 +62,32 @@
   }
   
   .btn {
-    padding: 0.75rem 2rem;
-    background-color: #4a2e13;
-    color: white;
-    border: none;
-    border-radius: 2rem;
-    text-decoration: none;
-    font-weight: bold;
+    display: inline-block;
+    background-color: #ffc107;
+    color: #121212;
+    padding: 0.75rem 1.5rem;
     font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
     transition: background-color 0.3s ease;
+    margin-top: 1rem;
   }
   
   .btn:hover {
-    background-color: #3a2410;
+    background-color: #e0a800;
+    color: #fff;
+  }
+
+  @media (max-width: 500px) {
+    .btn {
+      font-size: 1rem;
+      padding: 1rem 2rem;
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+    }
   }
   
   /* Navbar */
