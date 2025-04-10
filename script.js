@@ -121,4 +121,9 @@
     document.getElementById('hamburger-icon').addEventListener('click', () => {
         document.getElementById('nav-links').classList.toggle('show');
       });
-       
+      const hamburger = document.getElementById('hamburger-icon');
+      const navLinks = document.getElementById('navLinks');
+    
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });   
