@@ -16,6 +16,10 @@
     <label for="fullName">Full Name</label>
     <input type="text" id="fullName" name="Full Name" placeholder="Enter your full name" required>
 
+    <label for="specialInstructions">Special Instructions</label>
+    <textarea id="specialInstructions" name="Special Instructions" class="nice-textarea" rows="3" placeholder="Any specific requests or notes for your order..."></textarea>
+
+
     <label for="pickup-date">Pick-Up Date</label>
     <input type="date" id="pickup-date" name="Pick-Up Date" required>
     <small style="display:block; margin-top: 4px; color: #8b6b5c;">
@@ -40,6 +44,46 @@
                 </div>
                 <input type="hidden" id="cartData" name="Cart Data">
             </div>
+
+              <!-- Payment Method -->
+                <div class="section">
+                <h2>Payment Method</h2>
+            
+                <label>
+                <input type="radio" name="Payment Method" value="GCash" checked>
+                GCash (Send your payment to <strong>0917-XXXXXXX</strong>)
+                </label>
+
+                <!-- GCash QR Code -->
+                    <div class="gcash-qr">
+                        <img src="Pictures/code.jpg" alt="GCash QR Code">
+                        <small>Scan this QR code to pay via GCash</small>
+                    </div>
+            
+                    <label for="gcashReference">GCash Reference Number</label>
+                    <input 
+                      type="text" 
+                      id="gcashReference" 
+                      name="GCash Reference Number" 
+                      placeholder="Enter 13-digit GCash Ref No." 
+                      pattern="\d{13}" 
+                      maxlength="13" 
+                      inputmode="numeric" 
+                      required>
+                    <small style="color: #8b6b5c;">
+                      Please enter the 13-digit number shown on your GCash transaction receipt.
+                    </small>
+                    
+                    <label>
+                        <input type="checkbox" required>
+                        I confirm that I have sent the 50% downpayment via GCash.
+                      </label>
+
+                <small style="display:block; margin-top: 4px; color: #8b6b5c;">
+                    A 50% downpayment is required before we can process your order. Please pay via GCash and enter the reference number below.
+                </small>
+                </div>
+
 
             <!-- Submit -->
             <div class="submit-section">
