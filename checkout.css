@@ -172,3 +172,22 @@ input[type="time"] {
         font-size: 1.1rem;
     }
 } 
+.nice-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-family: inherit;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .nice-textarea:focus {
+    border-color: #ffc107;
+    box-shadow: none;
+    outline: none;
+  }
+  
