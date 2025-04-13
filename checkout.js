@@ -49,4 +49,32 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-  
+  const form = document.getElementById('orderForm');
+
+  // Dynamically add cart content to hidden field before submit
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent normal submit
+
+    // Get cart summary
+    const cartSummary = document.getElementById('cartSummary').innerText;
+    document.getElementById('cartData').value = cartSummary;
+
+    const formData = new FormData(form);
+
+    fetch("https://formspree.io/f/xoveyvpk", {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        window.location.href = "thankyou.html";
+      } else {
+        alert("There was a problem submitting your order.");
+      }
+    }).catch(error => {
+      console.error("Error:", error);
+      alert("There was an error. Please try again.");
+    });
+  });
