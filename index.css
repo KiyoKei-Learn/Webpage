@@ -1,4 +1,4 @@
-/* Reset and base styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,28 +9,42 @@
     height: 100%;
     font-family: 'Segoe UI', sans-serif;
     color: white;
-    background-color: #000; /* Dark theme */
+    background-color: #000000; 
   }
   
-  /* Hero Section (no background image) */
+  
   .hero {
-    background-color: #111; /* Solid dark background */
+    background: url('Pictures/bg4.jpg') no-repeat center center;
+    background-size: cover;
     height: 100vh;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    padding: 2rem;
+    padding-top: 100px;
+  }
+
+  .hero-logo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1.5rem auto; 
+    border: 2px solid #ffcc70;
   }
 
   .overlay {
-    background-color: rgba(0, 0, 0, 0.6); /* Optional subtle overlay */
-    padding: 3rem 2rem;
-    border-radius: 16px;
-    text-align: center;
-    width: 100%;
-    max-width: 800px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+  
   
   .hero-content {
     text-align: center;
@@ -63,7 +77,7 @@
   
   .btn {
     display: inline-block;
-    background-color: #ffc107;
+    background-color: rgb(165, 122, 42);
     color: #121212;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
@@ -76,7 +90,7 @@
   }
   
   .btn:hover {
-    background-color: #e0a800;
+    background-color: rgb(165, 122, 42);
     color: #fff;
   }
 
@@ -95,11 +109,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #111;
     padding: 1rem 2rem;
     position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
   }
-  
+    
   /* Logo */
   .logo {
     font-size: 2rem;
@@ -163,7 +177,7 @@
     top: 100%;
     left: 0;
     right: 0;
-    background-color: #111;
+    background-color: rgba(0, 0, 0, 0.7);
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
@@ -189,7 +203,7 @@
   
   /* Footer */
   footer {
-    background-color: #222;
+    background-color: rgba(0, 0, 0, 0.7);
     color: #ddd;
     text-align: center;
     padding: 1rem 0;
