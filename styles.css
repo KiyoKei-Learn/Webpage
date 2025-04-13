@@ -5,10 +5,19 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
   }
+
+  body {
+    background-image: url('Pictures/bg4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #f5f5f5;
+  }
   
   /* Navbar */
   .navbar {
-    background-color: #121212;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 1rem 2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     position: sticky;
@@ -82,7 +91,7 @@ body {
     .navbar-nav {
       display: none;
       flex-direction: column;
-      background-color: #111;
+      background-color: rgba(0, 0, 0, 0.7);
       position: absolute;
       top: 60px;
       right: 10px;
@@ -145,7 +154,7 @@ body {
   }
   
   .category-buttons button {
-    background-color: #343a40;
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -163,7 +172,7 @@ body {
   .category-buttons button.active {
     background-color: #ffc107;
     color: #121212;
-    box-shadow: 0 0 10px #ffc107, 0 0 20px #ffc107;
+    box-shadow: 0 0 10px #ffc107, 0 0 20px#ffc107;
   }
   
   .menu-section {
@@ -254,6 +263,24 @@ body {
   }
   
   /* Cart Popup */
+
+  .cart-popup {
+    position: fixed;
+    right: 20px;
+    top: 80px;
+    width: 320px;
+    max-height: 80vh;
+    background-color: #fff;
+    border: 2px solid #a47148;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
   #cartPopup {
     position: fixed;
     top: 70px;
@@ -277,6 +304,13 @@ body {
     margin-top: 0;
     margin-bottom: 0.75rem;
     font-size: 1.2rem;
+  }
+
+  #cart-items {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 300px;
+    margin-bottom: 1rem;
   }
   
   #cart-items p {
@@ -323,6 +357,25 @@ body {
   #cartPopup .clear-cart-btn:hover {
     background-color: #c82333;
   }
+
+  .clear-cart-btn,
+.cart-popup button:last-of-type {
+  padding: 0.6rem;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: white;
+  background-color: #a47148;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.clear-cart-btn:hover,
+.cart-popup button:last-of-type:hover {
+  background-color: #8c5c39;
+}
 
   /* Hamburger icon styles */
   .hamburger {
