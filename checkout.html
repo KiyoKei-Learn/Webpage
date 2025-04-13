@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1 class="title">Checkout</h1>
-        <form id="checkoutForm" action="https://formspree.io/f/xoveyvpk" method="POST">
+        <form id="orderForm">
             <!-- User Info -->
 <div class="section">
     <h2>Personal Information</h2>
@@ -53,7 +53,7 @@
                 <input type="radio" name="Payment Method" value="GCash" checked>
                 GCash (Send your payment to <strong>0917-XXXXXXX</strong>)
                 </label>
-
+                <h3>OR</h3>
                 <!-- GCash QR Code -->
                     <div class="gcash-qr">
                         <img src="Pictures/code.jpg" alt="GCash QR Code">
@@ -78,19 +78,18 @@
                         <input type="checkbox" required>
                         I confirm that I have sent the 50% downpayment via GCash.
                       </label>
-
+                      
                 <small style="display:block; margin-top: 4px; color: #8b6b5c;">
                     A 50% downpayment is required before we can process your order. Please pay via GCash and enter the reference number below.
                 </small>
                 </div>
 
-
             <!-- Submit -->
             <div class="submit-section">
+                <input type="hidden" name="_redirect" value="thankyou.html">
                 <button type="submit" class="btn-submit">Place Order</button>
                 <a href="menue.html" class="btn-back">← Go Back to Menu</a>
             </div>
-            
         </form>
     </div>
     <script src="checkout.js"></script>
