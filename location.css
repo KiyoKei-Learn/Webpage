@@ -8,18 +8,23 @@
   html, body {
     font-family: 'Segoe UI', sans-serif;
     color: white;
-    background-color: #000; /* Clean dark background */
+    background-color: rgba(0, 0, 0, 0.7);
   }
   
   /* Layout structure for sticky footer */
   body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    background-image: url('Pictures/bg4.jpg'); /* Replace with your actual file name */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white; /* Optional: makes your text readable on dark bg */
   }
   
   main {
     flex: 1;
+    padding: 2rem;
+    backdrop-filter: blur(3px);
   }
   
   /* Navigation Bar */
@@ -27,7 +32,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
     padding: 1rem 2rem;
     position: fixed;
@@ -174,7 +179,7 @@
   
   /* Footer */
   footer {
-    background-color: #222;
+    background-color: rgba(0, 0, 0, 0.7);
     color: #ddd;
     text-align: center;
     padding: 1rem 0;
