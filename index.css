@@ -1,4 +1,4 @@
-
+/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
@@ -199,6 +199,39 @@
   }
 }
 
+.faq-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 204, 112, 0.2);
+}
+
+.faq-section h1 {
+  text-align: center;
+  color: #ffcc70;
+  margin-bottom: 2rem;
+}
+
+.faq {
+  margin-bottom: 1.5rem;
+}
+
+.faq h3 {
+  color: #ffcc70;
+  font-size: 1.2rem;
+}
+
+.faq p {
+  font-size: 1rem;
+  color: #eee;
+}
+
+.faq a {
+  color: #ffcc70;
+  text-decoration: underline;
+}
 
   
   /* Footer */
