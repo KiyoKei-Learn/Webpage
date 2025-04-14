@@ -377,6 +377,14 @@ body {
   background-color: #8c5c39;
 }
 
+.drink-size {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: -4px;
+  margin-bottom: 4px;
+  font-weight: normal;
+}
+
   /* Hamburger icon styles */
   .hamburger {
     display: none;
